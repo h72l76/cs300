@@ -12,7 +12,9 @@
  * Last modified: 09/18/2016
  */ 
 
-
+// add include guard to this file
+#ifndef CS300_DS
+#define CS300_DS
 
 // we will define the capacity of array to be 100
 // note that there is no semicolon followed by 100 
@@ -36,6 +38,11 @@ public:
 	//   return true if success. 
 	//   return false if Array List is full.
 	bool addElement(value_type newElement);
+	
+	// addElement(index) function will add an element at given index.
+	//   return true if success. (within capacity, index in range)
+	//   return false else.
+	bool addElement(int index, value_type newElement);
 	
 	// deleteElement() function will delete the element given by index. 
 	//   return true if deleted.
@@ -63,3 +70,5 @@ private:
  	int count;
 
 };
+
+#endif
