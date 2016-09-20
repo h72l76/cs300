@@ -35,6 +35,13 @@ bool ArrayList::addElement(ArrayList::value_type newElement)
 
 }
 
+bool ArrayList::addElement(int index, ArrayList::value_type newElement)
+{
+	// if index within range and capacity not reached
+	// then move following elements then insert new element
+	
+}
+
 bool ArrayList::deleteElement(int index)
 {
 	if (index < count)
