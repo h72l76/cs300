@@ -20,8 +20,11 @@
 using namespace std;
 
 
-// pitfall: use ArrayList::value_type, not value_type
+/*
+ * Implementation for class ArrayList 
+ */
 
+// pitfall: use ArrayList::value_type, not value_type
 bool ArrayList::addElement(ArrayList::value_type newElement)
 {
 	if (count < ARRAY_CAPACITY)
@@ -40,6 +43,7 @@ bool ArrayList::addElement(int index, ArrayList::value_type newElement)
 	// if index within range and capacity not reached
 	// then move following elements then insert new element
 	
+	// to-do: implement this function in class	
 }
 
 bool ArrayList::deleteElement(int index)
@@ -75,10 +79,43 @@ int ArrayList::getCount()
 }
 
 
+/* 
+ * Implementation for class LinkedList
+ */
+
+void LinkedList::addElement(LinkedList::NodeP newElement)
+{
+	if (getHead() != NULL)
+	{
+		newElement->nextPart = head;
+		setHead(newElement);
+	}
+	else
+	{
+		setHead(newElement);
+	}
+}
+
+
+
+
+void arrayListTest();
+void linkedListTest();
+
 int main()
 {
+	// arrayListTest();
+	
+	// linkedListTest();
+	
+	
+	return 0;
+}
+
+void arrayListTest()
+{
 	// create ArrayList object
-	class ArrayList arrlist;
+	ArrayList arrlist;
 	
 	// print out initial count, which should be 0.
 	cout<<"Initial Count: "<<arrlist.getCount()<<endl;
@@ -103,6 +140,14 @@ int main()
 	arrlist.setElement(0, -11111);
 	for(int i = 0; i < arrlist.getCount(); i++)
 		cout<<"ArrayList @ index: "<<i<<" : "<<arrlist.getElement(i)<<endl;
+
+
+}
+
+void linkedListTest()
+{
+
+
 }
 
 

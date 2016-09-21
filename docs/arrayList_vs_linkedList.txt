@@ -1,0 +1,11 @@
+AL: Array List
+LL: Linked List
+
+Similarities: 
+  - They are containers for objects. 
+  - As containers, they both support mgmt over objects: add/del/search/access
+  
+Differences: 
+  - AL is usually statically allocated, thus AL usually has fixed and limited capacity.
+  - LL is usually dynamically allocated, thus LL's capacity can increase on demand. 
+  - AL 

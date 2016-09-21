@@ -21,6 +21,10 @@
 #define ARRAY_CAPACITY 100
 
 
+// include part.h for using class Part as a node to linked list.
+#include "part.h"
+
+
 // define class ArrayList
 class ArrayList
 {
@@ -68,6 +72,37 @@ private:
 	//  2. one integer to count how many elements in array. 
  	value_type array[ARRAY_CAPACITY];
  	int count;
+
+};
+
+
+class LinkedList
+{
+public: 
+	typedef Part* NodeP;
+	
+	// default constructor
+	LinkedList(){head = NULL;}
+	
+	void addElement(NodeP newElement);
+	
+	// deleteElement should be more general. 
+	// for now I will use PartNumber from Part as key
+	//   to find the Node to be deleted. 
+	// return true if found and deleted. 
+	// return false if not found
+	bool deleteElement(int key);
+	
+	NodeP getElement(int key);
+	
+	void setElement(int key);
+	
+	NodeP getHead(){return head};
+
+private:
+	NodeP head;
+	
+	void setHead(NodeP newElement);
 
 };
 
