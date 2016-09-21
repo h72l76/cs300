@@ -8,4 +8,21 @@ Similarities:
 Differences: 
   - AL is usually statically allocated, thus AL usually has fixed and limited capacity.
   - LL is usually dynamically allocated, thus LL's capacity can increase on demand. 
-  - AL 
+  
+  - AL support RANDOM ACCESS, i.e., jump to any element in index. 
+  - LL support SEQUENTIAL ACCESS, like an VCR tape. No jump is allowed. 
+  
+  - AL add/del an element given index, following elements need to be moved, which may take long time.
+  - LL add/del an element given key (not index), following elements need NOT to be moved. 
+  
+  - AL relies on count heavily. count tells where is the soft boundary, thus count needs to be maintained. 
+  - LL does not rely on count. It relies on head. Thus head needs to be maintained.
+  
+  - AL can take any type of object into AL. 
+  - LL can take "node-compatible" object into LL, i.e., the object it takes must have link to next one (or NULL). 
+  
+
+One sentence to recap Linked List: 
+  - "Next, please."
+
+  
