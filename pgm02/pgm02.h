@@ -16,7 +16,9 @@ public:
 	int partNum;
 	string description;
 	int quantity;
-	float 	;
+	float unitPrice;
+	
+	void printPart();
 };
 
 // define class ArrayList
