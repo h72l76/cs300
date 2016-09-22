@@ -20,6 +20,8 @@ public:
 	
 	void printPart();
 	
+	Part(){}
+	
 	Part(int pn, string desc, int quan, float up)
 	{
 		partNum = pn;
