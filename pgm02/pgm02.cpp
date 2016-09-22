@@ -29,7 +29,8 @@ bool ArrayList::addElement(int index, ArrayList::value_type newElement)
 	// if index within range and capacity not reached
 	// then move following elements then insert new element
 	
-	// to-do: implement this function in class	
+	// to-do: implement this function in class
+	return true;
 }
 
 bool ArrayList::deleteElement(int index)
@@ -102,7 +103,8 @@ int main()
 	while (cin.good() && choice != 5)
 	{
 		switch (choice){
-		case 1: 
+		case 1:
+			
 			break;
 		case 2: 
 			break;
