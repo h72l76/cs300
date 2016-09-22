@@ -11,6 +11,14 @@
 
 using namespace std;
 
+void Part::printPart()
+{
+	std::cout<<"Part #: "<<partNum<<std::endl;
+	std::cout<<"Description: "<<description<<std::endl;
+	std::cout<<"Quantity: "<<quantity<<std::endl;
+	std::cout<<"Unit Price: "<<unitPrice<<std::endl;
+}
+
 bool ArrayList::addElement(ArrayList::value_type newElement)
 {
 	if (count < ARRAY_CAPACITY)
@@ -104,9 +112,22 @@ int main()
 	{
 		switch (choice){
 		case 1:
-			
+			arrlist.getElement(0).printPart();
+			arrlist.getElement(1).printPart();
 			break;
 		case 2: 
+			cin.ignore();
+			
+			string str;
+			getline(cin, str);
+			int quant;
+			cin>>quant;
+			float unitP;
+			cin>>unitP;
+			int pn = 3030;
+			Part tempPart(pn, str, quant, unitP);	// constructor to construct a new part object.
+			arrlist.addElement(tempPart);
+			
 			break;
 		case 3:
 			break;
