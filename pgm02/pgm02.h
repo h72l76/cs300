@@ -19,6 +19,14 @@ public:
 	float unitPrice;
 	
 	void printPart();
+	
+	Part(int pn, string desc, int quan, float up)
+	{
+		partNum = pn;
+		description = desc;
+		quantity = quan;
+		unitPrice = up;
+	}
 };
 
 // define class ArrayList
