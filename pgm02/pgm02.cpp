@@ -234,6 +234,7 @@ void addNewPart(ArrayList& partList)
 	cout<<"Quantity: ";
 	cin>>quantity;
 	cout<<"Unit Price: "<<unitPrice;
+	cin>>unitPrice;
 		
 	Part newPart(partNum, description, quantity, unitPrice);
 	
