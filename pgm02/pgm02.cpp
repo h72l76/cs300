@@ -123,17 +123,25 @@ int main()
 			addNewPart(partList);
 			break;
 		case 3:
+			// TO_DO: modify part function.
 			break;
 		case 4:
+			// TO_DO: delete part function. 
 			break;
 		case 5:
+			// TO_DO: print total inventory total function.
 			break;
 		default:
 			break;	
 		}
+		
+		// prompt user to enter choice again. 
+		choice = printMenuGetUserChoice();
 	}	
 	
-	// write to file 
+	// TO_DO: write parts from partList to inventory.txt file.
+	
+	
 	
 	return 0;
 }
@@ -215,20 +223,21 @@ void readFileToArrayList(ArrayList& partList)
 
 void addNewPart(ArrayList& list)
 {
-		int partNum = list.getCount();
-		std::string description = "";
-		int quantity = 0;
-		float unitPrice = 0;
+	int partNum = list.getCount();
+	std::string description = "";
+	int quantity = 0;
+	float unitPrice = 0;
 		
-		cout<<"New Part Number: "<<partNum<<endl;
-		cout<<"Description: ";
-		getline(cin, description);
-		cout<<"Quantity: ";
-		cin>>quantity;
-		cout<<"Unit Price: "<<unitPrice;
+	cout<<"New Part Number: "<<partNum<<endl;
+	cout<<"Description: ";
+	getline(cin, description);
+	cout<<"Quantity: ";
+	cin>>quantity;
+	cout<<"Unit Price: "<<unitPrice;
 		
-		Part
-
-
+	Part newPart(partNum, description, quantity, unitPrice);
+	
+	list.addElement(newPart);
+		
 }
 
