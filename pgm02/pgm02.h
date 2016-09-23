@@ -1,9 +1,13 @@
-// this is header file for pgm2
-// it has declaration for class Part,
-// it has declaration for class ArrayList,
+/* Header file for CS 300 program 02
+ * 
+ * It contains declaration for class Part and class ArrayList
+ *
+ * Author: Huabo Lu
+ *
+ * Last modified: 09/22/2016
+ */
+ 
 
-#include <iostream>
-#include <fstream>
 #include <string>
 
 using namespace std;
@@ -13,15 +17,10 @@ using namespace std;
 class Part 
 {
 public: 
-	int partNum;
-	string description;
-	int quantity;
-	float unitPrice;
-	
-	void printPart();
-	
+	// default constructor must be presented if you have custom constructor
 	Part(){}
 	
+	// custom constructor, which initialize all varialbes in part
 	Part(int pn, string desc, int quan, float up)
 	{
 		partNum = pn;
@@ -29,6 +28,32 @@ public:
 		quantity = quan;
 		unitPrice = up;
 	}
+	
+	// printPart() will print all information for a part
+	void printPart();
+
+	// subTotal() will return the sub-total for this kind of part.
+	float subTotal(){return quantity * unitPrice;}
+	
+	// getter and setter function for each variable in part
+	// setter and getters are simple functions that returns value to caller, 
+	//   or set new value for variables. 
+	int		getPartNum(){return partNum;}
+	void 	setPartNum(int newNumber){partNum = newNumber;}
+	string 	getDescription(){return description;}
+	void 	setDescription(string newDescription){description = newDescription;}
+	int 	getQuantity(){return quantity;}
+	void 	setQuantity(int newQuantity){quantity = newQuantity;}
+	float 	getUnitPrice(){return unitPrice;}
+	void 	setUnitPrice(float newPrice){unitPrice = newPrice;}
+	
+	
+private: 
+	int partNum;
+	string description;
+	int quantity;
+	float unitPrice;	
+	
 };
 
 // define class ArrayList
@@ -37,6 +62,7 @@ class ArrayList
 public:
  	
 	// type can be easily changed here, and just here. 
+	// for program 02 we use Part
 	typedef Part value_type;
 
 	// default constructor 
@@ -48,12 +74,7 @@ public:
 	//   return true if success. 
 	//   return false if Array List is full.
 	bool addElement(value_type newElement);
-	
-	// addElement(index) function will add an element at given index.
-	//   return true if success. (within capacity, index in range)
-	//   return false else.
-	bool addElement(int index, value_type newElement);
-	
+		
 	// deleteElement() function will delete the element given by index. 
 	//   return true if deleted.
 	//   return false if incorrect index
@@ -70,6 +91,9 @@ public:
 	
 	// getCount() function will return count to caller. 
 	int getCount();
+	
+	// printList() function will travese the list and call print from Part.
+	void printList();
 	
 	
 private:

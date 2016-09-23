@@ -1,0 +1,20 @@
+0
+5.3 inch high res display
+20
+29.99
+1
+5.7 inch high res display
+20
+39.99
+2
+3 lb hammer
+10
+2.99
+3
+5 lb hammer
+20
+3.99
+4
+user manual
+100
+9.99
