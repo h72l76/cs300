@@ -209,7 +209,7 @@ void readFileToArrayList(ArrayList& partList)
 			// Part object is created by constructor
 			// Part object is added by calling addElement() of ArrayList object.
 			Part onePart(partNum, description, quantity, unitPrice);
-			list.addElement(onePart);
+			partList.addElement(onePart);
 		}	
 	}
 	else
@@ -221,9 +221,9 @@ void readFileToArrayList(ArrayList& partList)
 	file.close();
 }
 
-void addNewPart(ArrayList& list)
+void addNewPart(ArrayList& partList)
 {
-	int partNum = list.getCount();
+	int partNum = partList.getCount();
 	std::string description = "";
 	int quantity = 0;
 	float unitPrice = 0;
@@ -237,7 +237,7 @@ void addNewPart(ArrayList& list)
 		
 	Part newPart(partNum, description, quantity, unitPrice);
 	
-	list.addElement(newPart);
+	partList.addElement(newPart);
 		
 }
 
