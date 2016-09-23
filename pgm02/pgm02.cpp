@@ -200,7 +200,7 @@ void readFileToArrayList(ArrayList& partList)
 		// if reading file fails, the loop will end
 		while(file >> partNum)
 		{
-			file.ignore();
+			file.ignore(2);
 			std::getline(file, description);
 			file >> quantity;
 			file >> unitPrice;	
