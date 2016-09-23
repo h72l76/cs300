@@ -95,7 +95,9 @@ void ArrayList::printList()
 int printMenuGetUserChoice();
 void readFileToArrayList(ArrayList&);
 void addNewPart(ArrayList&);
-
+// TO_DO: declare modify part function.
+// TO_DO: declare delete part function.
+// TO_DO: declare print total function.
 
 
 int main()
@@ -233,7 +235,7 @@ void addNewPart(ArrayList& partList)
 	getline(cin, description);
 	cout<<"Quantity: ";
 	cin>>quantity;
-	cout<<"Unit Price: "<<unitPrice;
+	cout<<"Unit Price: ";
 	cin>>unitPrice;
 		
 	Part newPart(partNum, description, quantity, unitPrice);
@@ -242,3 +244,8 @@ void addNewPart(ArrayList& partList)
 		
 }
 
+// TO_DO: implement modify part function
+
+// TO_DO: implement delete part function
+
+// TO_DO: implement print total function
