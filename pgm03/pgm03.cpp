@@ -1,6 +1,9 @@
-// 
-// 
-//
+// This program is an application of linked list.
+// It is a mgmt program for book list. 
+// It uses BookNode as node, BookList as linked list.
+// Writtern by: Huabo Lu
+// Last modified date: Oct 04, 2016
+
 
 #include <iostream>
 #include <string>
@@ -8,8 +11,8 @@
 
 using namespace std;
 
-/* Implementation for class BookList START
- *
+/*
+ * Implementation for class BookList START
  */
 void BookList::addFirst(BookNode * book)
 {
