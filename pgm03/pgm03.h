@@ -2,7 +2,7 @@
 // It is a mgmt program for book list. 
 // It uses BookNode as node, BookList as linked list.
 // Writtern by: Huabo Lu
-// Last modified date: Oct 04, 2016
+// Last modified date: Oct 06, 2016
 
 #ifndef world_PGM_03_H_hello
 #define world_PGM_03_H_hello

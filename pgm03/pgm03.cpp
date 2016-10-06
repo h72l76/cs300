@@ -2,7 +2,7 @@
 // It is a mgmt program for book list. 
 // It uses BookNode as node, BookList as linked list.
 // Writtern by: Huabo Lu
-// Last modified date: Oct 04, 2016
+// Last modified date: Oct 06, 2016
 
 
 #include <iostream>
@@ -12,7 +12,7 @@
 using namespace std;
 
 /*
- * Implementation for class BookList START
+ * Implementation for class BookList STARTS HERE
  */
 void BookList::addFirst(BookNode * book)
 {
@@ -91,9 +91,60 @@ bool BookList::deleteBook(std::string title)
 	}
 }
 
+BookList::~BookList()
+{
+	while(head != NULL){
+		string tempTitle = head->getTitle();
+		deleteBook(tempTitle);
+		cout<<"Book "<<tempTitel<<" has been deleted. "<<endl;
+	}
+}
+/*
+ * Implementation for class BookList ENDS HERE
+ */
 
 
 int main()
 {
+	// create the object of BookList first.
+	// booklist is created statically.
+	// HAS TO HAVE OBJECT to call member functions from class.
+	BookList booklist;
+	
+	
+	// Example of how to create BookNode object and then add to BookList obj.
+	string tempTitle = "";
+	cout<<"Please input Book Title: ";
+	getline(cin, tempTitle);
+	// Dynamic memory: create the BookNode dynamically by using keyword new
+	BookNode * bn1 = new BookNode(tempTitle);
+	BookNode * bn2 = new BookNode("Java");
+	BookNode * bn3 = new BookNode("Python3");
+	
+	// Example of call member functions
+	// Use OBJECT DOT FUNCTION, e.g. booklist.addFirst() 
+	booklist.addFirst(bn2);
+	booklist.addFirst(bn3);
+	booklist.addLast(bn1);
+
+	// Example of traverse. In this traverse function I will print book title. 
+	booklist.traverse();
+	
+	// Example of deleteBook member function. 
+	booklist.deleteBook("java");
+	booklist.deleteBook("Python3");
+	
+	cout<<"After deletion: "<<endl;
+	booklist.traverse();
+	
+	
+	// Example of isInTheList member function. 
+	if(booklist.isInTheList("Java"))
+		cout<<"Book Java is in"<<endl;
+	else
+		cout<<"Book Java is not in"<<endl;
+	
+	// TO_DO: read through previous code in main(), then delete them
+	//   and build your own for program 3. 
 	return 0;
 }
